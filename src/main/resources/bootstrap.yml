@@ -1,0 +1,12 @@
+# Application Name
+spring:
+    application:
+        name: ${SERVICE_NAME}:app-monitoring}
+    cloud:
+        config:
+
+info:
+    app:
+        name: Application monitoring service
+        description: Application monitoring service
+        version: "@project.version@"

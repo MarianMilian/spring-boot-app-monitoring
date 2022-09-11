@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+
+  app_monitoring:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-password
+      MYSQL_USER: flyway
+      MYSQL_PASSWORD: flyway
+      MYSQL_DATABASE: MYSQL_DATABASE
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
